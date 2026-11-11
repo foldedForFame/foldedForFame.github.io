@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<!--
+  FOLDED FOR FAME | South Daddy Productions
+  Single-page site | 2026-11-11 | Final site refinement
+  Adapted from the licensed BootstrapMade Workfolio template.
+  https://bootstrapmade.com/workfolio-bootstrap-portfolio-template/
+
+  Companions:
+    assets/css/main.css
+    assets/js/main.js
+    assets/vendor/
+
+  ALL BRAND + PHOTOGRAPHIC ASSETS (PNG, directly under assets/img/):
+    logo.png                Black transparent three-F logo (shown white via CSS filter)
+    favicon.png             Brand favicon
+    apple-touch-icon.png    Apple touch icon
+    hero.png                Main hero photograph
+    factory.png             Factory editorial photograph
+    watch.png               Outdoor performance photograph
+    apply.png               Performer portrait beside application
+    social.png              Social preview and cinematic casting banner
+
+  BEFORE GOING LIVE:
+    1. Confirm the referenced photography and image rights.
+    2. Replace ADD_FOLDED_FOR_FAME_WEB3FORMS_ACCESS_KEY with the actual Web3Forms access key.
+       Create the key using southdaddyproductions@gmail.com as the recipient.
+       A destination email address ALONE in this HTML will not route submissions.
+    3. Confirm both free and premium destinations in the Linktree.
+    4. Deploy the custom CSS/JS alongside this HTML and check image crops.
+    5. Verify analytics, the form, and link targets on the production domain.
+
+  The release/catalog feature has been intentionally deferred until real releases exist.
+  No placeholder episodes or made-up model profiles are advertised.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111116">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="South Daddy Productions">
+  <title>Folded for Fame | Pretzel Factory | Watch &amp; Casting</title>
+  <meta name="description" content="Folded for Fame is an adults-only flexibility and performance channel. Watch official clips, find full access, or apply for casting at the Pretzel Factory.">
+  <meta name="keywords" content="Folded for Fame, Pretzel Factory, South Daddy Productions, adult entertainment, flexible performers, gymnast performers, cheer performers, contortion, dance performance, adult casting, performer application, free previews, full access">
+  <link rel="canonical" href="https://foldedforfame.com/">
+
+  <!-- The existing social.png is used for social sharing and the on-page casting banner. -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Folded for Fame">
+  <meta property="og:title" content="Folded for Fame | Every Shift Has a Twist">
+  <meta property="og:description" content="Every shift has a twist. Watch clips, unlock full access, or apply to perform at the Pretzel Factory.">
+  <meta property="og:url" content="https://foldedforfame.com/">
+  <meta property="og:image" content="https://foldedforfame.com/assets/img/social.png">
+  <meta property="og:image:alt" content="Folded for Fame, the Pretzel Factory, athletic performance and movement series">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Folded for Fame | Every Shift Has a Twist">
+  <meta name="twitter:description" content="Every shift has a twist. Watch now, unlock full access, or clock in for casting.">
+  <meta name="twitter:image" content="https://foldedforfame.com/assets/img/social.png">
+
+  <!-- Use the actual existing PNG brand assets. -->
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <!-- Fonts shared with the custom main.css. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- GA4, unique to Folded for Fame. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5F9QBTZQTB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-5F9QBTZQTB');
+  </script>
+
+  <!-- Search/organization identity; no invented episodes or review data. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://foldedforfame.com/#organization",
+        "name": "Folded for Fame",
+        "url": "https://foldedforfame.com/",
+        "logo": "https://foldedforfame.com/assets/img/logo.png",
+        "sameAs": ["https://linktr.ee/foldedforfame"],
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "South Daddy Productions",
+          "url": "https://southdaddy.com/"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://foldedforfame.com/#website",
+        "name": "Folded for Fame",
+        "url": "https://foldedforfame.com/",
+        "inLanguage": "en-US",
+        "publisher": { "@id": "https://foldedforfame.com/#organization" }
+      }
+    ]
+  }
+  </script>
+  <!-- BootstrapMade Workfolio: https://bootstrapmade.com/workfolio-bootstrap-portfolio-template/ -->
+</head>
+<body class="index-page">
+  <a class="visually-hidden-focusable position-absolute top-0 start-0 bg-white text-dark p-3" href="#main-content">Skip to content</a>
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="#hero" class="logo d-flex align-items-center" aria-label="Folded for Fame, back to top">
+        <img src="assets/img/logo.png" class="brand-logo" alt="" width="46" height="46">
+        <span class="sitename brand-name">Folded for Fame</span>
+      </a>
+
+      <nav id="navmenu" class="navmenu" aria-label="Main navigation">
+        <ul id="navmenu-list">
+          <li><a href="#factory">The Factory</a></li>
+          <li><a href="#watch">Watch</a></li>
+          <li><a href="#apply">Apply</a></li>
+        </ul>
+        <button class="mobile-nav-toggle d-xl-none" type="button" aria-label="Open navigation" aria-controls="navmenu-list" aria-expanded="false"><i class="bi bi-list" aria-hidden="true"></i></button>
+      </nav>
+
+      <a class="cta-btn d-none d-xl-inline-flex" href="https://linktr.ee/foldedforfame" target="_blank" rel="noopener noreferrer" data-track="premium_header"><i class="bi bi-unlock" aria-hidden="true"></i> Unlock Full Access <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+    </div>
+  </header>
+
+  <main id="main-content" class="main">
+
+    <!-- Hero: three direct audience paths. -->
+    <section id="hero" class="hero section" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <span class="status"><span class="ping" aria-hidden="true"></span> Welcome to the Pretzel Factory</span>
+            <h1 id="hero-title">Every shift has <span class="hl accent-text">a twist.</span></h1>
+            <p class="lead">Big moves. <span class="accent-text">Bent rules.</span> Camera-ready talent.</p>
+            <div class="actions">
+              <a href="https://linktr.ee/foldedforfame" class="btn-main" target="_blank" rel="noopener noreferrer" data-track="free_hero">Watch <i class="bi bi-play-circle" aria-hidden="true"></i></a>
+              <a href="https://linktr.ee/foldedforfame" class="btn-line" target="_blank" rel="noopener noreferrer" data-track="premium_hero">Unlock <i class="bi bi-unlock" aria-hidden="true"></i></a>
+              <a href="#apply" class="btn-line" data-track="apply_hero">Apply <i class="bi bi-person-plus" aria-hidden="true"></i></a>
+            </div>
+            <p class="hero-footnote">18+ only <span aria-hidden="true">·</span> A South Daddy Productions channel</p>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <figure class="hero-media mb-0">
+              <img src="assets/img/hero.png" class="img-fluid" width="1000" height="1250" alt="Adult professional gymnast showing a controlled movement pose in a modern living room" fetchpriority="high" decoding="async">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Full-width typographic refrain. -->
+    <div class="factory-ticker" aria-label="Clock in. Bend the rules.">
+      <div class="factory-ticker-inner" aria-hidden="true">
+        <strong>CLOCK IN</strong><span class="separator">✳</span><strong>BEND THE RULES</strong><span class="separator">✳</span>
+        <strong>CLOCK IN</strong><span class="separator">✳</span><strong>BEND THE RULES</strong><span class="separator">✳</span>
+        <strong>CLOCK IN</strong><span class="separator">✳</span><strong>BEND THE RULES</strong>
+      </div>
+    </div>
+
+    <!-- The Factory: short premise plus scannable highlights. -->
+    <section id="factory" class="about section light-background" aria-labelledby="factory-title">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-5" data-aos="fade-right" data-aos-delay="100">
+            <figure class="factory-media mb-0">
+              <img src="assets/img/factory.png" class="img-fluid rounded-4" width="1000" height="1250" alt="Adult professional dancer demonstrating a graceful stretch in an inviting rental bedroom" loading="lazy" decoding="async">
+            </figure>
+          </div>
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="150">
+            <span class="section-kicker">The Factory</span>
+            <h2 id="factory-title">This is where the <span class="accent-text">rules bend.</span></h2>
+            <p class="story">Real flexibility. <span class="accent-text">Trouble on camera.</span></p>
+            <div class="factory-explainer">
+              <p>This isn't an ordinary rehearsal. Gymnasts, dancers, and fearless performers bring serious skill to some very unserious challenges.</p>
+              <p>New setting. New twist. The cameras roll, and the routine goes off-script.</p>
+            </div>
+            <div class="row g-3 factory-points mt-3 mb-4">
+              <div class="col-sm-4">
+                <div class="factory-point"><i class="bi bi-stars" aria-hidden="true"></i><h3>The Talent</h3><p>Gymnasts, dancers, cheer athletes, and contortionists.</p></div>
+              </div>
+              <div class="col-sm-4">
+                <div class="factory-point"><i class="bi bi-lightning-charge" aria-hidden="true"></i><h3>The Twist</h3><p>New settings. Unexpected challenges.</p></div>
+              </div>
+              <div class="col-sm-4">
+                <div class="factory-point"><i class="bi bi-camera-reels" aria-hidden="true"></i><h3>The Show</h3><p>Big moves. No boring shifts.</p></div>
+              </div>
+            </div>
+            <a href="#watch" class="btn-line factory-link">Watch Now <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Viewer funnel: free and premium choices both currently use the known Linktree. -->
+    <section id="watch" class="portfolio section" aria-labelledby="watch-title">
+      <div class="container section-title" data-aos="fade-up">
+        <span class="section-kicker">On Camera</span>
+        <h2 id="watch-title">She said she wouldn't fold. <span class="accent-text d-block">Then the camera rolled.</span></h2>
+        <p>Get a first look. Or go all in.</p>
+      </div>
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <figure class="shot watch-media mb-0">
+              <img src="assets/img/watch.png" class="img-fluid" width="1440" height="1000" alt="Adult performance athletes demonstrating energetic movement outdoors" loading="lazy" decoding="async">
+            </figure>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="160">
+            <div class="row g-3 watch-choices">
+              <div class="col-12">
+                <div class="watch-choice">
+                  <div class="watch-choice-copy">
+                    <span class="section-kicker"><i class="bi bi-play-circle" aria-hidden="true"></i> Free Channels</span>
+                    <h3>Watch <span class="accent-text">Now.</span></h3>
+                    <p>Clips, previews, and fresh drops.</p>
+                  </div>
+                  <a class="btn-main" href="https://linktr.ee/foldedforfame" target="_blank" rel="noopener noreferrer" data-track="free_watch">Watch Now <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="watch-choice">
+                  <div class="watch-choice-copy">
+                    <span class="section-kicker"><i class="bi bi-unlock" aria-hidden="true"></i> Premium</span>
+                    <h3>Go <span class="accent-text">All In.</span></h3>
+                    <p>Find the full releases.</p>
+                  </div>
+                  <a class="btn-line" href="https://linktr.ee/foldedforfame" target="_blank" rel="noopener noreferrer" data-track="premium_watch">Unlock Full Access <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cinematic casting banner: the horizontal social asset now has an on-page role. -->
+    <section id="apply-intro" class="casting-banner section" aria-labelledby="apply-intro-title">
+      <img class="casting-banner-photo" src="assets/img/social.png" width="1200" height="630" alt="" loading="lazy" decoding="async">
+      <div class="container casting-banner-content" data-aos="fade-up" data-aos-delay="100">
+        <span class="section-kicker casting-banner-kicker">Now Casting</span>
+        <h2 id="apply-intro-title">Got range? <span class="accent-text">Prove it.</span></h2>
+        <p>Flexible. Confident. <span class="accent-text">Built for overtime.</span></p>
+        <a class="casting-scroll" href="#apply" data-track="apply_banner">Apply <i class="bi bi-arrow-down" aria-hidden="true"></i></a>
+      </div>
+    </section>
+
+    <!-- Web3Forms application; replace the placeholder access key before publishing. -->
+    <section id="apply" class="contact application section" aria-labelledby="apply-title">
+      <div class="container section-title" data-aos="fade-up">
+        <span class="section-kicker">Performer Application</span>
+        <h2 id="apply-title">Ready to <span class="accent-text">clock in?</span></h2>
+        <p>Make your introduction. We'll take it from there.</p>
+      </div>
+      <div class="container">
+        <div class="row g-4 g-lg-5 align-items-stretch application-layout">
+          <div class="col-lg-7 application-form-col" data-aos="fade-up" data-aos-delay="100">
+            <div class="application-success" id="application-success" role="status" hidden>
+              <strong>Application received.</strong> Thanks for clocking in. If there's a fit, the casting team will reach out.
+            </div>
+            <form id="fff-application-form" class="php-email-form application-form" action="https://api.web3forms.com/submit" method="POST" aria-labelledby="apply-title" data-bs-theme="dark">
+              <!-- Configure the key using southdaddyproductions@gmail.com at https://web3forms.com/. -->
+              <input type="hidden" name="access_key" value="ADD_FOLDED_FOR_FAME_WEB3FORMS_ACCESS_KEY">
+              <input type="hidden" name="subject" value="[Folded for Fame] Performer Application">
+              <input type="hidden" name="from_name" value="Folded for Fame Casting">
+              <input type="hidden" name="channel" value="Folded for Fame">
+              <input type="hidden" name="redirect" value="https://foldedforfame.com/?application=received#apply">
+              <div class="d-none" aria-hidden="true"><input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></div>
+
+              <div class="row gy-4">
+                <div class="col-md-6">
+                  <label class="form-label" for="fff-name">Name or stage name <span aria-hidden="true">*</span></label>
+                  <input class="form-control" id="fff-name" type="text" name="name" maxlength="120" autocomplete="name" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="fff-email">Email <span aria-hidden="true">*</span></label>
+                  <input class="form-control" id="fff-email" type="email" name="email" maxlength="254" autocomplete="email" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="fff-location">City / State <span aria-hidden="true">*</span></label>
+                  <input class="form-control" id="fff-location" type="text" name="location" maxlength="120" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="fff-social">Social handle or portfolio</label>
+                  <input class="form-control" id="fff-social" type="text" name="social_link" maxlength="500" placeholder="@handle or link">
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="fff-specialty">Your background <span aria-hidden="true">*</span></label>
+                  <select class="form-select" id="fff-specialty" name="performance_background" required>
+                    <option value="" selected disabled>Select your specialty</option>
+                    <option value="Gymnastics / acrobatics">Gymnastics / acrobatics</option>
+                    <option value="Cheer / dance">Cheer / dance</option>
+                    <option value="Flexibility / contortion">Flexibility / contortion</option>
+                    <option value="Other movement / performance">Other movement / performance</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="fff-message">What makes you camera-ready? <span aria-hidden="true">*</span></label>
+                  <textarea class="form-control" id="fff-message" name="message" rows="4" maxlength="2500" placeholder="A little about your experience, personality, and why you'd be a great fit." required></textarea>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" id="fff-age" type="checkbox" name="age_confirmation" value="I confirm I am 18 or older" required>
+                    <label class="form-check-label" for="fff-age">I confirm that I am at least 18 years old.</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn-submit" type="submit">Send Application <i class="bi bi-arrow-up-right" aria-hidden="true"></i></button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-5 application-image-col" data-aos="fade-up" data-aos-delay="160">
+            <aside class="application-aside" aria-label="Folded for Fame casting editorial">
+              <figure class="application-side-photo mb-0">
+                <img src="assets/img/apply.png" class="img-fluid" width="1000" height="1250" alt="Confident adult athletic performer in a warm, modern vanity setting" loading="lazy" decoding="async">
+              </figure>
+              <div class="application-aside-copy">
+                <span class="section-kicker">NEXT SHIFT</span>
+                <h3>Your <span class="accent-text">move.</span></h3>
+                <p>Bring range. Bring personality.</p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container footer-top">
+      <div class="row gy-3 align-items-center">
+        <div class="col-lg-5 footer-about">
+          <a href="#hero" class="logo d-inline-flex align-items-center gap-2" aria-label="Folded for Fame, back to top">
+            <img src="assets/img/logo.png" alt="" width="42" height="42" class="brand-logo">
+            <span class="sitename">Folded for Fame</span>
+          </a>
+          <p class="footer-tagline">Every shift has a twist.</p>
+        </div>
+        <div class="col-lg-7 footer-network">
+          <h4>More from <span class="accent-text">South Daddy</span></h4>
+          <div class="footer-network-links">
+            <a href="https://theproblow.com/" target="_blank" rel="noopener noreferrer" data-track="channel_problow">Pro Blow <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+            <a href="https://breakingbrats.com/" target="_blank" rel="noopener noreferrer" data-track="channel_breakingbrats">Breaking Brats <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+            <a href="https://wanderinglust.com/" target="_blank" rel="noopener noreferrer" data-track="channel_wanderinglust">Wandering Lust <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>&copy; <span id="copyright-year">2026</span> Folded for Fame <span aria-hidden="true">·</span> 18+ only</span>
+      <span>A <a href="https://southdaddy.com/" target="_blank" rel="noopener noreferrer" data-track="studio_footer">South Daddy Productions</a> channel</span>
+    </div>
+  </footer>
+
+  <!-- Shared navigation, AOS, CTA tracking and casting confirmation. -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Back to top"><i class="bi bi-arrow-up-short" aria-hidden="true"></i></a>
+
+  <!-- No template contact validator: Web3Forms uses native form submission. -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
