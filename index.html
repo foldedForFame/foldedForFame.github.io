@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
   FOLDED FOR FAME | South Daddy Productions
-  Single-page site | 2026-11-11 | Final site refinement
+  Single-page site | 2026-11-11 | Formspark integration
   Adapted from the licensed BootstrapMade Workfolio template.
   https://bootstrapmade.com/workfolio-bootstrap-portfolio-template/
 
@@ -22,9 +22,8 @@
 
   BEFORE GOING LIVE:
     1. Confirm the referenced photography and image rights.
-    2. Replace ADD_FOLDED_FOR_FAME_WEB3FORMS_ACCESS_KEY with the actual Web3Forms access key.
-       Create the key using southdaddyproductions@gmail.com as the recipient.
-       A destination email address ALONE in this HTML will not route submissions.
+    2. Formspark application endpoint is configured to notify southdaddyproductions@gmail.com.
+       Submit a real test application on the deployed site and confirm email delivery.
     3. Confirm both free and premium destinations in the Linktree.
     4. Deploy the custom CSS/JS alongside this HTML and check image crops.
     5. Verify analytics, the form, and link targets on the production domain.
@@ -258,7 +257,7 @@
       </div>
     </section>
 
-    <!-- Web3Forms application; replace the placeholder access key before publishing. -->
+    <!-- Formspark performer application: inline feedback is handled in assets/js/main.js. -->
     <section id="apply" class="contact application section" aria-labelledby="apply-title">
       <div class="container section-title" data-aos="fade-up">
         <span class="section-kicker">Performer Application</span>
@@ -271,14 +270,15 @@
             <div class="application-success" id="application-success" role="status" hidden>
               <strong>Application received.</strong> Thanks for clocking in. If there's a fit, the casting team will reach out.
             </div>
-            <form id="fff-application-form" class="php-email-form application-form" action="https://api.web3forms.com/submit" method="POST" aria-labelledby="apply-title" data-bs-theme="dark">
-              <!-- Configure the key using southdaddyproductions@gmail.com at https://web3forms.com/. -->
-              <input type="hidden" name="access_key" value="ADD_FOLDED_FOR_FAME_WEB3FORMS_ACCESS_KEY">
-              <input type="hidden" name="subject" value="[Folded for Fame] Performer Application">
-              <input type="hidden" name="from_name" value="Folded for Fame Casting">
+            <div class="application-success" id="application-error" role="alert" hidden>
+              We couldn't confirm your application was sent. Please check your connection and try again.
+            </div>
+            <form id="fff-application-form" class="php-email-form application-form" action="https://submit-form.com/FuiYsAH5H" method="POST" aria-labelledby="apply-title" data-bs-theme="dark">
+              <!-- Formspark controls notification details; routing is configured in the Formspark dashboard. -->
+              <input type="hidden" name="_email.subject" value="[FOLDED FOR FAME] Application">
+              <input type="hidden" name="_email.from" value="Folded for Fame">
               <input type="hidden" name="channel" value="Folded for Fame">
-              <input type="hidden" name="redirect" value="https://foldedforfame.com/?application=received#apply">
-              <div class="d-none" aria-hidden="true"><input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></div>
+              <div class="d-none" aria-hidden="true"><input type="text" name="_honeypot" tabindex="-1" autocomplete="off"></div>
 
               <div class="row gy-4">
                 <div class="col-md-6">
@@ -367,10 +367,10 @@
     </div>
   </footer>
 
-  <!-- Shared navigation, AOS, CTA tracking and casting confirmation. -->
+  <!-- Shared navigation, AOS, CTA tracking and Formspark casting feedback. -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Back to top"><i class="bi bi-arrow-up-short" aria-hidden="true"></i></a>
 
-  <!-- No template contact validator: Web3Forms uses native form submission. -->
+  <!-- Formspark uses native validation and an AJAX handler in assets/js/main.js. -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/js/main.js"></script>

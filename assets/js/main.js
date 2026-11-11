@@ -83,21 +83,59 @@
   const copyrightYear = document.getElementById('copyright-year');
   if (copyrightYear) copyrightYear.textContent = String(new Date().getFullYear());
 
-  // Web3Forms redirects here after a successful submission.
-  const params = new URLSearchParams(window.location.search);
-  if (params.get('application') === 'received') {
-    const success = document.getElementById('application-success');
-    const form = document.getElementById('fff-application-form');
-    if (success) success.hidden = false;
-    if (form) form.hidden = true;
-    if (typeof window.gtag === 'function') {
-      window.gtag('event', 'application_success', { form_name: 'folded_for_fame_casting' });
+  // Formspark: submit without leaving the page. The HTML POST still works without JS.
+  const applicationForm = document.getElementById('fff-application-form');
+  const applicationSuccess = document.getElementById('application-success');
+  const applicationError = document.getElementById('application-error');
+  const submitButton = applicationForm?.querySelector('button[type="submit"]');
+  let submitting = false;
+  let submitted = false;
+
+  applicationForm?.addEventListener('submit', async event => {
+    event.preventDefault();
+    if (submitting || submitted || !applicationForm.reportValidity()) return;
+
+    submitting = true;
+    if (submitButton) submitButton.disabled = true;
+    if (applicationError) applicationError.hidden = true;
+
+    // Native HTML posts use dotted field names; Formspark AJAX expects nested _email.
+    const fields = Object.fromEntries(new FormData(applicationForm).entries());
+    const subject = fields['_email.subject'];
+    const from = fields['_email.from'];
+    delete fields['_email.subject'];
+    delete fields['_email.from'];
+    const payload = { ...fields, _email: { subject, from } };
+
+    try {
+      const response = await fetch(applicationForm.action, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+      if (!response.ok) throw new Error(`Formspark HTTP ${response.status}`);
+
+      submitted = true;
+      applicationForm.hidden = true;
+      if (applicationSuccess) {
+        applicationSuccess.hidden = false;
+        applicationSuccess.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      }
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'application_success', { form_name: 'folded_for_fame_casting' });
+      }
+    } catch (error) {
+      // Do not automatically retry: the server may have received an ambiguous request.
+      console.error('Folded for Fame application submission could not be confirmed.', error);
+      if (applicationError) applicationError.hidden = false;
+    } finally {
+      submitting = false;
+      if (submitButton && !submitted) submitButton.disabled = false;
     }
-    // Avoid triggering a duplicate conversion event on refresh.
-    params.delete('application');
-    const remaining = params.toString();
-    window.history.replaceState(null, '', `${window.location.pathname}${remaining ? `?${remaining}` : ''}${window.location.hash}`);
-  }
+  });
 
   document.addEventListener('click', event => {
     const link = event.target.closest('a[data-track]');
